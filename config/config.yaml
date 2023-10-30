@@ -6,6 +6,11 @@ data_ingestion:
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
 
+data_validation:
+  root_dir: artifacts/data_validation
+  STATUS_FILE: artifacts/data_validation/status.txt
+  ALL_REQUIRED_FILES: ["train","test","validation"]
+
 prepare_base_model:
   root_dir: artifacts/prepare_base_model
   base_model_path: artifacts/prepare_base_model/base_model.h5
