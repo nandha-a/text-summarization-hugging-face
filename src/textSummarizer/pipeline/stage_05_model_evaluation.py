@@ -1,18 +1,19 @@
 from textSummarizer.config.configuration import ConfigurationManager
-from textSummarizer.components.model_trainer import ModelTrainer
+from textSummarizer.components.model_evaluation import ModelEvaluation
 from textSummarizer.logging import logger
 
-STAGE_NAME = "Model Trainer"
+STAGE_NAME = "Model Evaluation"
 
-class ModelTrainingPipeline:
+class ModelEvaluationPipeline:
     def __init__(self):
         pass
 
     def main(self):
         config = ConfigurationManager()
-        model_trainer_config = config.get_model_trainer_config()
-        model_trainer = ModelTrainer(config=model_trainer_config)
-        model_trainer.train()
+        model_evaluation_config = config.get_model_evaluation_config()
+        model_evaluation = ModelEvaluation(config=model_evaluation_config)
+        model_evaluation.evaluate()
+
 
 
 
@@ -20,7 +21,7 @@ class ModelTrainingPipeline:
 if __name__ == '__main__':
     try:
         logger.info(f">>>>>>>> stage {STAGE_NAME} started <<<<<<<<")
-        obj = ModelTrainingPipeline()
+        obj = ModelEvaluationPipeline()
         obj.main()
         logger.info(f">>>>>>>> stage {STAGE_NAME} completed <<<<<<<<\n\nx========x")
     except Exception as e:
