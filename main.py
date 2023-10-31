@@ -9,7 +9,7 @@ from textSummarizer.pipeline.stage_05_model_evaluation import ModelEvaluationPip
 STAGE_NAME = "Data Ingestion"
 
 try:
-    logger.info(f">>>>>>>> statge {STAGE_NAME} started <<<<<<<<")
+    logger.info(f">>>>>>>> stage {STAGE_NAME} started <<<<<<<<")
     obj = DataIngestionTrainingPipeline()
     obj.main()
     logger.info(f">>>>>>>> stage {STAGE_NAME} completed <<<<<<<<\n\nx========x")
@@ -20,7 +20,7 @@ except Exception as e:
 STAGE_NAME = "Data Validation"
 
 try:
-    logger.info(f">>>>>>>> statge {STAGE_NAME} started <<<<<<<<")
+    logger.info(f">>>>>>>> stage {STAGE_NAME} started <<<<<<<<")
     obj = DataValidationTrainingPipeline()
     obj.main()
     logger.info(f">>>>>>>> stage {STAGE_NAME} completed <<<<<<<<\n\nx========x")
@@ -32,7 +32,7 @@ except Exception as e:
 STAGE_NAME = "Data Transformation"
 
 try:
-    logger.info(f">>>>>>>> statge {STAGE_NAME} started <<<<<<<<")
+    logger.info(f">>>>>>>> stage {STAGE_NAME} started <<<<<<<<")
     obj = DataTransformationTrainingPipeline()
     obj.main()
     logger.info(f">>>>>>>> stage {STAGE_NAME} completed <<<<<<<<\n\nx========x")
@@ -44,7 +44,7 @@ except Exception as e:
 STAGE_NAME = "Model Trainer"
 
 try:
-    logger.info(f">>>>>>>> statge {STAGE_NAME} started <<<<<<<<")
+    logger.info(f">>>>>>>> stage {STAGE_NAME} started <<<<<<<<")
     obj = ModelTrainingPipeline()
     obj.main()
     logger.info(f">>>>>>>> stage {STAGE_NAME} completed <<<<<<<<\n\nx========x")
